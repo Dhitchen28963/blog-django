@@ -41,17 +41,16 @@ def post_detail(request, slug):
                 request, messages.SUCCESS,
                 'Comment submitted and awaiting approval'
             )
-
+    
     comment_form = CommentForm()
 
     return render(
-        request, 
-        "blog/post_detail.html", 
+        request,
+        "blog/post_detail.html",
         {
             "post": post,
             "comments": comments,
             "comment_count": comment_count,
-            "comment_form": comment_form,
-            "coder": "Matt Rudge"
+            "comment_form": comment_form
         },
     )
